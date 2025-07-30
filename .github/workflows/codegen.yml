@@ -19,4 +19,4 @@ jobs:
         run: java --version
       
       - name: use jar to generate api code from yml file
-        run: java -jar ~/codegen/swagger-codegen-cli.jar generate -i ~/codegen/swagger.yml -l javascript -o ~/codegen/
+        run: java -jar codegen/swagger-codegen-cli.jar generate -i codegen/swagger.yml -l javascript -o codegen/
