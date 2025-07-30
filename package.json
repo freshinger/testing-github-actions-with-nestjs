@@ -7,7 +7,7 @@
     "test": "jest --config ./jest.config.js",
     "lint": "npx eslint ./src/",
     "start:dev": "ts-node ./src/main.ts",
-    "build":"nest build"
+    "build": "nest build"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +16,8 @@
   "dependencies": {
     "@nestjs/common": "^11.1.5",
     "@nestjs/core": "^11.1.5",
-    "@nestjs/platform-express": "^11.1.5"
+    "@nestjs/platform-express": "^11.1.5",
+    "nest": "^0.1.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
