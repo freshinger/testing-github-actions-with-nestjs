@@ -20,3 +20,6 @@ jobs:
       
       - name: use jar to generate api code from yml file
         run: java -jar codegen/swagger-codegen-cli.jar generate -i codegen/swagger.yml -l javascript -o codegen/
+
+      - name: Download a single artifact
+        uses: actions/download-artifact@v4
