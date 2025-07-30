@@ -1,0 +1,27 @@
+name: Testing codegen
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Set up Java
+        uses: actions/setup-java@3
+        with:
+          java-version: '24'
+
+      - name: Check Java Version
+        run: java --version
+
+      - name: Upload JAR artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: swagger codegen and yml file
+          path: codegen/
+      
+      - name: use jar to generate api code from yml file
+        run: java -jar swagger-codegen-cli.jar generate -i swagger.yml -l javascript -o ~/codegen/
